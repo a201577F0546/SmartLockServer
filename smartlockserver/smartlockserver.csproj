@@ -32,8 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>www.ico.la_7e38f9c14fefa7f72537492c6a7d13c1_128X128.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +53,13 @@
     <Compile Include="App_code\DB.cs" />
     <Compile Include="App_code\DBcontrol.cs" />
     <Compile Include="App_code\Dohash.cs" />
+    <Compile Include="App_code\Heartbeat.cs" />
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
     <Compile Include="SLserver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -84,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\459_577f0dfccaa47.png" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="www.ico.la_7e38f9c14fefa7f72537492c6a7d13c1_128X128.ico" />
+    <Content Include="www.ico.la_a8150333853ab429a2dd66c40be25fae_128X128.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
